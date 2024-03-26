@@ -20,28 +20,24 @@ public class StockController {
         this.stockService = stockService;
     }
 
-
-
-
-    @GetMapping
-    public Flux<Stock> getAllStocks() {
-        return stockService.getAllStocks();
-    }
-
-    @GetMapping("/{id}")
-    public Mono<StockDto> getStockById(@PathVariable Long id) {
-        return stockService.getStockById(id);
+    @PostMapping
+    public Mono<StockDto> saveStock(@RequestBody StockDto stockDto) {
+        return stockService.save(stockDto);
     }
 
     @PutMapping("/{id}")
-    public Mono<StockDto> updateStockPrice(@PathVariable Long id, @RequestParam BigDecimal newPrice) {
-        return stockService.updateStockPrice(id, newPrice);
+    public Mono<StockDto> updateStockPrice(@PathVariable long id, @RequestBody StockDto stockDto) {
+        return stockService.updateStockPrice(id, stockDto);
     }
 
-    @PostMapping
-    public Mono<Stock> createStock(@RequestBody StockDto stockDto) {
-        return stockService.save(stockDto);
+    @GetMapping("/{id}")
+    public Mono<StockDto> getStockById(@PathVariable long id) {
+        return stockService.getStockById(id);
     }
+
+    @GetMapping
+    public Flux<StockDto> getAllStocks() {
+        return stockService.getAllStocks();
+    }
+
 }
-
-
