@@ -1,4 +1,4 @@
-package com.example.store.entity;
+package com.example.stock.entity;
 
 
 import lombok.Getter;

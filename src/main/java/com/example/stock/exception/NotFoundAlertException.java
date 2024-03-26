@@ -1,4 +1,4 @@
-package com.example.store.exception;
+package com.example.stock.exception;
 
 public class NotFoundAlertException extends RuntimeException {
 

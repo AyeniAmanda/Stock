@@ -1,6 +1,6 @@
-package com.example.store.repo;
+package com.example.stock.repo;
 
-import com.example.store.entity.Stock;
+import com.example.stock.entity.Stock;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 
 public interface StockRepository extends ReactiveCrudRepository<Stock, Long> {

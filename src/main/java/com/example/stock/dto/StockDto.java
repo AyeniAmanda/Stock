@@ -1,4 +1,4 @@
-package com.example.store.dto;
+package com.example.stock.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -14,7 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StockDto {
-    private double amount;
+    private Double amount;
     private String name;
 
 }
