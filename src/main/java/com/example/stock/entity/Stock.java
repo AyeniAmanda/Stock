@@ -1,14 +1,14 @@
 package com.example.stock.entity;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -16,7 +16,8 @@ import java.util.Objects;
 @SuppressWarnings("common-java:DuplicatedBlocks")
 @Getter
 @Setter
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class Stock {
 
     @org.springframework.data.annotation.Id

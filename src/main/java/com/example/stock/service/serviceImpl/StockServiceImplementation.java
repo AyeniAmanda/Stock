@@ -7,12 +7,10 @@ import com.example.stock.exception.NotFoundAlertException;
 import com.example.stock.repo.StockRepository;
 import com.example.stock.service.StockService;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ObjectUtils;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Service
@@ -75,6 +73,7 @@ public class StockServiceImplementation implements StockService {
                     }
                 });
     }
+
     private StockDto mapToDto(Stock stock) {
         StockDto stockDto = new StockDto();
         stockDto.setName(stock.getName());
