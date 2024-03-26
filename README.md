@@ -8,8 +8,7 @@ To run the application locally, follow the instructions below:
 
 Java JDK (8 or later)
 Maven
-Node.js (for frontend)
-npm (for frontend)
+
 Installation
 Clone the repository:
 
@@ -46,5 +45,3 @@ A stock object has the following fields:
 * Java
 * Spring Boot
 * Maven
-* React.js (for frontend)
-* Axios (for API requests)
