@@ -54,7 +54,7 @@ public class StockServiceImplementation implements StockService {
             if (stockDto.getAmount() != null) {
                 existingStock.setCurrentPrice(BigDecimal.valueOf(stockDto.getAmount()));
             }
-            existingStock.setLastUpdate(Timestamp.valueOf(LocalDateTime.now()));
+            existingStock.setLastUpdate(LocalDateTime.now());
         }
     }
 
@@ -86,8 +86,8 @@ public class StockServiceImplementation implements StockService {
         Stock stock = new Stock();
         stock.setName(stockDto.getName());
         stock.setCurrentPrice(BigDecimal.valueOf(stockDto.getAmount()));
-        stock.setCreateDate(Timestamp.valueOf(LocalDateTime.now()));
-        stock.setLastUpdate(Timestamp.valueOf(LocalDateTime.now()));
+        stock.setCreateDate(LocalDateTime.now());
+        stock.setLastUpdate(LocalDateTime.now());
         return stock;
     }
 

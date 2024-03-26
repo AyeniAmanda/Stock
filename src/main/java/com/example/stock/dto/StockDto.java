@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.relational.core.mapping.Column;
+
+import java.time.LocalDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -16,6 +19,8 @@ import lombok.Setter;
 public class StockDto {
     private Double amount;
     private String name;
+    private LocalDateTime createDate;
+    private LocalDateTime lastUpdate;
 
 }
 

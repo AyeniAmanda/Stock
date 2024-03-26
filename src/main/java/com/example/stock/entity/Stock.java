@@ -8,6 +8,8 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Table(name = "stock")
@@ -26,10 +28,10 @@ public class Stock {
     @Column("currentPrice")
     private BigDecimal currentPrice;
 
-    @Column("createDate")
-    private Timestamp createDate;
-    @Column("lastUpdate")
-    private Timestamp lastUpdate;
+    @Column("created_date")
+    private LocalDateTime createDate;
+    @Column("updated_date")
+    private LocalDateTime lastUpdate;
 
 
     @Override
