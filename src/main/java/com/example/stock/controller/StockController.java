@@ -38,7 +38,7 @@ public class StockController {
                 .map(stockDto -> ResponseEntity.ok().body(stockDto))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
-
+    @CrossOrigin
     @GetMapping
     public Flux<StockDto> getAllStocks() {
         return stockService.getAllStocks();
