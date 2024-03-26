@@ -1,7 +1,6 @@
 package com.example.store.entity;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.relational.core.mapping.Column;
@@ -15,7 +14,7 @@ import java.util.Objects;
 @SuppressWarnings("common-java:DuplicatedBlocks")
 @Getter
 @Setter
-@AllArgsConstructor
+
 public class Stock {
 
     @org.springframework.data.annotation.Id
